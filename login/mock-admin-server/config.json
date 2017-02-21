@@ -1,0 +1,49 @@
+{
+    "server": {
+        "port": 3367
+    },
+    "salesApi": {
+        "host": "120.26.93.91",
+        "port": 9490
+    },
+    "authentication": {
+        "tokenKeyword":"access-token",
+        "expirationTime": "1h",
+        "tokenSecret": "A711DFB7C41178"
+    },
+    "accessLog": {
+        "format": "prod",
+        "fileConfig": {
+          "filename": "./log/access-%DATE%.log",
+          "frequency": "daily",
+          "verbose": false,
+          "date_format": "YYYY-MM-DD"
+        }
+    },
+	"mongoService": {
+		"connStr": "mongodb://catfish:qingchun123@121.40.149.82:27017/appdb_dev",
+        "authdb": "admin",
+		"prefix": "dev"
+	},
+    "qrCode": {
+        "startMinutesOfDay": 510,
+        "endMinutesOfDay": 1350
+    },
+    "aliMQS": {
+      "aliConfig": {
+        "userId": "1667348596157055",
+        "keyId": "sulgyCs1lNU420ra",
+        "keySecret": "QbXX86FSRUNHEMyEGXfHznJ00xeeop",
+        "region": "hangzhou"
+      },
+      "queuePrefix": "QA",
+      "POSSalesStatusQueue": "POSSalesStatusQueue",
+      "queuePriorityNormal": 8,
+      "defaultDelaySeconds": 0,
+      "defaultMaxMessageSize": 2048,
+      "defaultMessageRetentionPeriod": 1209600,
+      "defaultVisibilityTimeout": 30,
+      "defaultPollingWaitSeconds": 0
+    }
+
+}
